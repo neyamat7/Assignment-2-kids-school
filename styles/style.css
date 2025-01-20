@@ -21,6 +21,7 @@ body {
   --Cyan: rgb(5, 212, 223);
   --dark: rgb(17, 17, 17);
   --light: rgb(255, 255, 255);
+  --light-green: rgb(149, 178, 38);
 }
 
 /* shared class */
@@ -78,7 +79,9 @@ body {
 .small-header {
   font-size: 1.5rem;
 }
-
+.extra-small-header {
+  font-size: 1rem;
+}
 .desc-text {
   color: hsla(0, 0%, 51%, 1);
 }
@@ -148,7 +151,6 @@ nav {
 /* standard curriculum starts */
 .standard-curriculam {
   align-items: center;
-  border: 1px solid red;
   /* gap: 80px; */
   gap: 50px;
   background-image: url(../assets/bg.png);
@@ -359,9 +361,6 @@ nav {
   .stories-section {
     justify-content: center;
     align-items: center;
-    gap: 80px;
-    padding: 60px 0;
-    border: 1px solid red;
     background: url(../assets/bg.png),
       linear-gradient(
         0deg,
@@ -369,7 +368,14 @@ nav {
         rgba(255, 255, 255, 0.3) 100%
       );
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+  }
+
+  .stories-section-content {
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 60px 0;
   }
 
   .stories-card-container {
@@ -377,31 +383,61 @@ nav {
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
+    gap: 19px;
   }
 
   .stories-card {
-    border: 1px solid red;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
+    background: var(--light);
+    border-radius: 16px;
   }
+
+  /* .stories-card.long-card {
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background: var(--light);
+    border-radius: 16px;
+  } */
 
   .story-card-img {
     display: flex;
     position: relative;
-    border: 1px solid red;
+    border-radius: 16px 16px 0px 0px;
+  }
+
+  .story-card-img img {
+    border-radius: 16px 16px 0px 0px;
   }
 
   .story-card-img .btn {
-    font-size: 1rem;
-    padding: 14px 18px;
+    font-size: 0.9rem;
+    padding: 9px 18px;
     position: absolute;
     bottom: -23px;
     left: 10%;
   }
 
-  .btn-story-1 {
+  .story-card-img .btn-story-1 {
+    font-size: 1rem;
+    padding: 14px 18px;
     background-color: var(--blue);
+  }
+
+  .long-card {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 100%;
+    justify-content: space-between;
+  }
+  .long-card .story-card-img img {
+    width: 100%;
+  }
+
+  .btn-story-2 {
+    background-color: var(--light-green);
   }
 
   .story-card-content {
