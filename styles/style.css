@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
-/* 
- {
-rgb(222, 245, 255)              
-rgb(255, 244, 220)
-  box-shadow: inset 0px 0px 28.3px 0.94px rgb(242, 232, 255)
-}
-
-
-*/
-
 body {
   font-family: "Quicksand", serif;
 }
@@ -69,6 +59,7 @@ body {
   color: rgb(255, 255, 255);
   font-weight: 600;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .btn-secondary {
@@ -76,6 +67,20 @@ body {
   /* padding-inline: 45px; */
   padding: 12px 24px;
   font-size: 1rem;
+}
+
+.medium-header {
+  font-size: 2.875rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.small-header {
+  font-size: 1.5rem;
+}
+
+.desc-text {
+  color: hsla(0, 0%, 51%, 1);
 }
 
 /* nav styles starts */
@@ -139,6 +144,90 @@ nav {
   width: 100%;
 }
 /* banner styles ends */
+
+/* standard curriculum starts */
+.standard-curriculam {
+  align-items: center;
+  border: 1px solid red;
+  /* gap: 80px; */
+  gap: 50px;
+  background-image: url(../assets/bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 60px 0;
+}
+
+.medium-header {
+  font-size: 2.875rem;
+}
+
+.curriculam-card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.curriculum-card {
+  justify-content: center;
+  align-items: center;
+  max-width: 367px;
+  gap: 32px;
+  box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
+  border-radius: 18.86px;
+  padding: 53px 40px;
+  text-align: center;
+}
+
+.curriculum-card-1 {
+  border: 0.94px solid rgb(222, 245, 255);
+  background: linear-gradient(
+      180deg,
+      rgb(222, 245, 255),
+      rgba(255, 255, 255, 0) 40%
+    ),
+    rgb(255, 255, 255);
+}
+
+.curriculum-card-2 {
+  border: 0.94px solid rgb(255, 244, 220);
+  background: linear-gradient(
+      180deg,
+      rgb(255, 244, 220),
+      rgba(255, 255, 255, 0) 40%
+    ),
+    rgb(255, 255, 255);
+}
+
+.curriculum-card-3 {
+  border: 0.94px solid rgb(242, 232, 255);
+  background: linear-gradient(
+      180deg,
+      rgb(238, 225, 255),
+      rgba(255, 255, 255, 0) 40%
+    ),
+    rgb(255, 255, 255);
+}
+
+.curriculum-card-1 a {
+  color: var(--blue);
+}
+.curriculum-card-2 a {
+  color: var(--orrange);
+}
+
+.curriculum-card-3 a {
+  color: hsla(271, 100%, 51%, 1);
+}
+
+.arrow-icon {
+  display: none;
+}
+/* standard curriculum ends */
+
+/* our stories styles starts */
+
+/* our stories styles ends */
 
 /* responsive design */
 @media only screen and (min-width: 576px) {
@@ -227,4 +316,98 @@ nav {
     width: revert;
   }
   /* banner styles ends */
+
+  /* standard curriculum starts */
+  .standard-curriculam {
+    gap: 80px;
+  }
+
+  .curriculam-card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .curriculum-card {
+    justify-content: center;
+    align-items: center;
+    max-width: 367px;
+    gap: 32px;
+    box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
+    border-radius: 18.86px;
+    padding: 53px 40px;
+    text-align: center;
+  }
+
+  .arrow-icon {
+    display: flex;
+    gap: 10px;
+  }
+  .arrow-icon span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    background: var(--orrange);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  /* standard curriculum ends */
+
+  /* stories card styles starts */
+  .stories-section {
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 60px 0;
+    border: 1px solid red;
+    background: url(../assets/bg.png),
+      linear-gradient(
+        0deg,
+        rgba(254, 163, 1, 0.3),
+        rgba(255, 255, 255, 0.3) 100%
+      );
+    background-position: center;
+    background-size: cover;
+  }
+
+  .stories-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stories-card {
+    border: 1px solid red;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .story-card-img {
+    display: flex;
+    position: relative;
+    border: 1px solid red;
+  }
+
+  .story-card-img .btn {
+    font-size: 1rem;
+    padding: 14px 18px;
+    position: absolute;
+    bottom: -23px;
+    left: 10%;
+  }
+
+  .btn-story-1 {
+    background-color: var(--blue);
+  }
+
+  .story-card-content {
+    padding: 34px;
+    padding-top: 0;
+    gap: 20px;
+  }
+  /* stories card styles ends */
 }
