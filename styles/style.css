@@ -61,10 +61,12 @@ body {
   font-weight: 600;
   border-radius: 12px;
   cursor: pointer;
+  transition: all 0.4s ease;
 }
 
 .btn-secondary {
   background: var(--dark);
+  border: 0.5px solid var(--dark);
   padding: 12px 24px;
   font-size: 1rem;
 }
@@ -177,10 +179,10 @@ nav {
   border-radius: 18.86px;
   padding: 53px 40px;
   text-align: center;
+  border: 0.94px solid rgb(222, 245, 255);
 }
 
 .curriculum-card-1 {
-  border: 0.94px solid rgb(222, 245, 255);
   background: linear-gradient(
       180deg,
       rgb(222, 245, 255),
@@ -190,7 +192,6 @@ nav {
 }
 
 .curriculum-card-2 {
-  border: 0.94px solid rgb(255, 244, 220);
   background: linear-gradient(
       180deg,
       rgb(255, 244, 220),
@@ -200,7 +201,6 @@ nav {
 }
 
 .curriculum-card-3 {
-  border: 0.94px solid rgb(242, 232, 255);
   background: linear-gradient(
       180deg,
       rgb(238, 225, 255),
@@ -218,6 +218,10 @@ nav {
 
 .curriculum-card-3 a {
   color: hsla(271, 100%, 51%, 1);
+}
+
+.curriculum-card a {
+  font-weight: 700;
 }
 
 .arrow-icon {
@@ -247,7 +251,7 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .stories-card {
@@ -373,7 +377,14 @@ footer .desc-text {
   width: 35px;
   height: 35px;
   border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.social-icon > *:hover {
+  transform: scale(1.04);
+}
+
 .fb-icon {
   background: rgb(59, 89, 152);
 }
@@ -435,6 +446,11 @@ footer .desc-text {
   .btn-primary {
     display: block;
     background: var(--orrange);
+    border: 0.5px solid var(--orrange);
+  }
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--dark);
   }
 
   .menu-icon {
@@ -465,6 +481,10 @@ footer .desc-text {
     background: var(--dark);
     padding-inline: 45px;
     font-size: 1.25rem;
+  }
+  .btn-secondary:hover {
+    background: transparent;
+    color: var(--dark);
   }
 
   .banner-img {
