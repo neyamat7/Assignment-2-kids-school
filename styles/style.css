@@ -252,7 +252,6 @@ nav {
 
 .stories-card {
   justify-content: center;
-  align-items: center;
   gap: 30px;
   background: var(--light);
   border-radius: 16px;
@@ -316,22 +315,18 @@ footer .desc-text {
 .footer-content {
   padding-inline-start: 10px;
   justify-content: space-between;
-  /* gap: 150px; */
   gap: 50px;
 }
 
 .footer-logo-content {
   max-width: 400px;
-  /* gap: 35px; */
   gap: 22px;
 }
 
 .footer-logo-content .desc-text {
-  /* font-size: 1.25rem; */
   font-size: 1rem;
 }
 .footer-logo {
-  /* gap: 10px; */
   gap: 8px;
   align-items: center;
   margin-inline-start: -5px;
@@ -340,7 +335,6 @@ footer .desc-text {
   height: 100%;
 }
 .footer-header {
-  /* font-size: 2.6rem; */
   font-size: 2.1rem;
   line-height: 2.1rem;
 }
@@ -383,22 +377,15 @@ footer .desc-text {
 .fb-icon {
   background: rgb(59, 89, 152);
 }
+.dribble-icon {
+  background: rgb(234, 76, 137);
+}
 .twitter-icon {
   background: rgb(29, 161, 242);
 }
 .google-plus-icon {
   background: rgb(221, 75, 57);
 }
-.instagram-icon {
-  background: linear-gradient(
-    45deg,
-    rgba(255, 220, 0, 1),
-    rgba(255, 48, 108, 1),
-    rgba(131, 58, 180, 1),
-    rgba(38, 128, 235, 1)
-  );
-}
-
 /* footer styles end */
 
 /* responsive design */
@@ -550,7 +537,7 @@ footer .desc-text {
     font-size: 0.9rem;
     padding: 9px 18px;
     position: absolute;
-    bottom: -23px;
+    bottom: -17px;
     left: 10%;
   }
 
@@ -558,6 +545,7 @@ footer .desc-text {
     font-size: 1rem;
     padding: 14px 18px;
     background-color: var(--blue);
+    bottom: -23px;
   }
 
   .small-header {
@@ -572,39 +560,28 @@ footer .desc-text {
     display: flex;
     flex-direction: column;
     grid-column: span 2;
+    justify-content: space-between;
     grid-row: span 2;
     height: 100%;
-    justify-content: space-between;
     max-width: 100%;
   }
-  .long-card .story-card-img img {
+  .story-card-img img {
     width: 100%;
   }
 
   .story-card-content {
-    padding: 34px;
+    padding: 30px;
     padding-top: 0;
   }
   /* stories card styles ends */
 
   /* footer styles start */
-  footer {
-    background-color: var(--blue);
-    color: var(--light);
-    padding: 120px 0;
-  }
-
-  footer .desc-text {
-    color: var(--light);
-  }
 
   .footer-content {
     flex-direction: row;
-    justify-content: space-between;
     gap: 150px;
   }
   .footer-logo-content {
-    max-width: 400px;
     gap: 35px;
   }
 
@@ -614,61 +591,19 @@ footer .desc-text {
   .footer-logo {
     gap: 10px;
   }
-  .footer-logo-img img {
-    height: 100%;
-  }
+
   .footer-header {
     font-size: 2.6rem;
     line-height: 2.4rem;
-  }
-
-  .footer-nav-container,
-  .social-icon-container {
-    gap: 30px;
   }
 
   .footer-nav-items {
     gap: 20px;
   }
 
-  .footer-nav-link {
-    color: var(--light);
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
-
-  .social-icon-container {
-    padding-inline-end: 30px;
-  }
-
-  .social-icon {
-    gap: 10px;
-  }
   .social-icon > * {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 40px;
     height: 40px;
-    border-radius: 4px;
-  }
-  .fb-icon {
-    background: rgb(59, 89, 152);
-  }
-  .twitter-icon {
-    background: rgb(29, 161, 242);
-  }
-  .google-plus-icon {
-    background: rgb(221, 75, 57);
-  }
-  .instagram-icon {
-    background: linear-gradient(
-      45deg,
-      rgba(255, 220, 0, 1),
-      rgba(255, 48, 108, 1),
-      rgba(131, 58, 180, 1),
-      rgba(38, 128, 235, 1)
-    );
   }
   /* footer styles end */
 }
