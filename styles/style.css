@@ -420,8 +420,8 @@ footer .desc-text {
   }
 
   .logo-container {
-    justify-content: center;
     gap: 10px;
+    padding-inline-start: 0;
   }
 
   .logo-text {
