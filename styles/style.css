@@ -60,8 +60,10 @@ body {
   color: rgb(255, 255, 255);
   font-weight: 600;
   border-radius: 12px;
-  cursor: pointer;
   transition: all 0.4s ease;
+}
+button {
+  cursor: pointer;
 }
 
 .btn-secondary {
@@ -109,7 +111,7 @@ nav {
 
 .menu-icon {
   font-size: 1.8rem;
-  padding-inline-end: 10px;
+  padding-inline-end: 15px;
 }
 /* nav styles ends */
 
@@ -145,6 +147,13 @@ nav {
 
 .banner-img img {
   width: 100%;
+}
+
+marquee {
+  font-size: 1.5rem;
+  margin-top: 50px;
+  color: var(--dark);
+  font-weight: 500;
 }
 /* banner styles ends */
 
@@ -280,6 +289,7 @@ nav {
   position: absolute;
   bottom: -14px;
   left: 10%;
+  border-radius: 47.93px;
 }
 
 .long-card {
@@ -382,7 +392,7 @@ footer .desc-text {
 }
 
 .social-icon > *:hover {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .fb-icon {
@@ -400,7 +410,7 @@ footer .desc-text {
 /* footer styles end */
 
 /* responsive design */
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 600px) {
   /* header section styles */
   nav {
     justify-content: space-between;
@@ -428,6 +438,7 @@ footer .desc-text {
   .nav-link {
     font-size: 1.25rem;
     font-weight: 700;
+    position: relative;
   }
 
   .home-link {
@@ -441,6 +452,39 @@ footer .desc-text {
   }
   .admission-link {
     color: var(--blue);
+  }
+
+  .home-link:hover::after,
+  .about-link:hover::after,
+  .facilities-link:hover::after,
+  .admission-link:hover::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    left: 50%;
+    height: 0.5px;
+    transform: translateX(-50%);
+    animation: item-underline 0.4s forwards;
+  }
+
+  .home-link::after {
+    background: var(--orrange);
+  }
+  .about-link::after {
+    background: var(--slate-Blue);
+  }
+  .facilities-link::after {
+    background: var(--Cyan);
+  }
+  .admission-link::after {
+    background: var(--blue);
+  }
+
+  @keyframes item-underline {
+    to {
+      width: 100%;
+    }
   }
 
   .btn-primary {
@@ -531,6 +575,11 @@ footer .desc-text {
     background: var(--orrange);
     border-radius: 50%;
     cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  .arrow-icon span:hover {
+    border: 1px solid var(--dark);
+    transform: scale(0.92);
   }
   /* standard curriculum ends */
 
