@@ -493,6 +493,7 @@ footer .desc-text {
 
   .btn-primary {
     display: block;
+    margin-right: 5px;
     background: var(--orrange);
     border: 0.5px solid var(--orrange);
   }
@@ -584,6 +585,8 @@ footer .desc-text {
   .arrow-icon span:hover {
     border: 1px solid var(--dark);
     transform: scale(0.92);
+    background: transparent;
+    color: var(--dark);
   }
   /* standard curriculum ends */
 
